@@ -15,6 +15,13 @@ def button_message(message):
     item2= types.KeyboardButton("instagram")
     markup.add(item1, item2)
     bot.send_message(message.chat.id,'Выберите что вам надо', reply_markup=markup)
+    
+@bot.message_handler(content_types='text')
+def message_reply(message):
+    if message.text=="vk":
+        bot.send_message(message.chat.id,"https://vk.com/")
+    elif message.text=="instagram":
+        bot.send_message(message.chat.id,"https://www.instagram.com/")
 
 
 if __name__ == '__main__':
