@@ -24,17 +24,16 @@ def message_reply(message):
         bot.send_message(message.chat.id,"https://www.instagram.com/")
 @bot.message_handler(content_types='text')
 def message_reply(message):
-    if message_reply(message)
+    if message.text =="Игрок выбрал гайд проф игрока":
     markup=types.ReplyKeyboardMarkup(resize_ketboard=True)
-    item1=types.ReplKeyboardButton("")
-    item2=types.ReplKeyboardButton("")
-    item3=types.ReplKeyboardButton("")
+    item1=types.ReplKeyboardButton("Взять бутылку")
+    item2=types.ReplKeyboardButton("Взять ботинки")
     markup.add(item1, item2, item3)
     bot.send_message(message.chat.id, "", reply_markup=markup)
-    else message.text=="":
+    else message.text=="Игрок выбрал гайд друга":
         markup=types.ReplyKeyboardMarkup(resize_keyboard=True)
-        item1=types.ReplKeyboardButton("")
-        item2=types.ReplKeyboardButton("")
+        item1=types.ReplKeyboardButton("Взять манго")
+        item2=types.ReplKeyboardButton("Взять танго")
         markup.add(item1, item2)
         bot.send_message(message.chat.id, " ", reply_markup=markup)
 
