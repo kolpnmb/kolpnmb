@@ -22,7 +22,21 @@ def message_reply(message):
         bot.send_message(message.chat.id,"https://vk.com/")
     elif message.text=="instagram":
         bot.send_message(message.chat.id,"https://www.instagram.com/")
-
+@bot.message_handler(content_types='text')
+def message_reply(message):
+    if message_reply(message)
+    markup=types.ReplyKeyboardMarkup(resize_ketboard=True)
+    item1=types.ReplKeyboardButton("")
+    item2=types.ReplKeyboardButton("")
+    item3=types.ReplKeyboardButton("")
+    markup.add(item1, item2, item3)
+    bot.send_message(message.chat.id, "", reply_markup=markup)
+    else message.text=="":
+        markup=types.ReplyKeyboardMarkup(resize_keyboard=True)
+        item1=types.ReplKeyboardButton("")
+        item2=types.ReplKeyboardButton("")
+        markup.add(item1, item2)
+        bot.send_message(message.chat.id, " ", reply_markup=markup)
 
 if __name__ == '__main__':
      bot.infinity_polling()
